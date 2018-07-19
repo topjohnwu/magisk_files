@@ -3,6 +3,10 @@
 
 A stable release is imminent!
 
+### Hot Fix (versionCode: 1671)
+- Fix booting to fastboot on half-treble devices (OP5/5T on stable OOS, maybe more)
+- Detect ramdisk partition for Huawei
+
 ### Bug Fixes
 EMUI's logcat for some reason will change the permission of its output file, and since Magisk will do several logcat commands dumping output to `/dev/null`, the permission is messed up, causing tons of stuff to break, including `adbd`; the issue is now fixed. Some new Treble devices (e.g. OnePlus 5/5T) had some issues with the "lazy" method I used to early mount partitions, so the "proper" way is introduced:  `magiskinit` will start reading fstab in device trees to detect the partition partname. A positive side effect is that some custom Treble devices (many Xiaomi devices) modifies the device tree to redirect vendor to an unused partition, and this is now fully supported!
 
