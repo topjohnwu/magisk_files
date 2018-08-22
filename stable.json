@@ -9,9 +9,14 @@
     "version": "16.0",
     "versionCode": "1600",
     "link": "https://github.com/topjohnwu/Magisk/releases/download/v16.0/Magisk-v16.0.zip",
-    "note": "https://forum.xda-developers.com/showpost.php?p=75648916&postcount=39"
+    "note": "https://forum.xda-developers.com/showpost.php?p=75648916&postcount=39",
+    "md5": "6de1bc5d2f3b5fbcdebc2d6023902417"
   },
   "uninstaller": {
     "link": "https://github.com/topjohnwu/Magisk/releases/download/v16.7/Magisk-uninstaller-20180719.zip"
+  },
+  "snet": {
+    "versionCode": "11",
+    "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/44dc7e75ab3f28b22c0cbccbb3d889f3fca3107b/snet.apk"
   }
 }
