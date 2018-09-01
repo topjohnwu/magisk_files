@@ -1,8 +1,11 @@
-## 2018.9.1 Magisk v17.0
+## 2018.9.1 Magisk v17.1
 (XDA Post: [here](https://forum.xda-developers.com/showpost.php?p=77496559&postcount=45))
 
 This long awaited stable release is delayed due to me moving to the US and some unexpected issues in the meantime. But hey it's here guys!  
 I suggest those who care (e.g. module developers) follow me on [Twitter](https://twitter.com/topjohnwu), as I do most of the announcements other than Magisk releases over there.
+
+### Hotfix v17.1
+There was some incompatibility issues when upgrading from v16.0 to v17.0. If you are caught in a bootloop, first use the uninstaller to completely remove Magisk, then flash v17.1, I'm extremely sorry for all stuck in bootloops.
 
 ### Release Cycles
 Starting from v17.0, the stable channel and the beta channel are considered as "public releases", meaning both will be well tested before release and should be good for most normal users as daily driver. In general (meaning no catastrophic bugs), each major version bump (e.g. `v17` -> `v18`) will be on the stable channel, and each minor version bump (e.g. `v17.0` -> `v17.1`) will be on the beta channel. For version codes, the first 3 digits represent the version of a public release (e.g. `17500` will be `v17.5`), the last 2 digits are for internal iterations (e.g. `17521` will be `v17.6` WIP, iteration 21). There will be a separate "Experimental Channel" in the cutting edge, but this is out of scope for this post.
