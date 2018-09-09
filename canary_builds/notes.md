@@ -1,4 +1,6 @@
-## Magisk (2d7c1da7) (17101)
-- Update resetprop to upstream system properties code, should properly support all properties on Android 9.0
+## Magisk (39be7a62) (17102)
+- Randomize service names to bypass detections. Support FGO, CrackProof protections, and Fortnite
 
-## Magisk Manager (2d7c1da7) (140)
+## Magisk Manager (39be7a62) (141)
+- Request external storage permission when choosing to patch boot images
+- Translation updates
