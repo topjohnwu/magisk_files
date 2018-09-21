@@ -1,9 +1,16 @@
 {
   "app": {
-    "version": "5.9.1",
-    "versionCode": "139",
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/manager-v5.9.1/MagiskManager-v5.9.1.apk",
-    "note": "https://raw.githubusercontent.com/topjohnwu/Magisk/ff3dad245721c7d01f2c4772c700dafbc6ba9ef9/app/src/full/res/raw/changelog.md"
+    "version": "6.0.0",
+    "versionCode": "147",
+    "link": "https://github.com/topjohnwu/Magisk/releases/download/manager-v6.0.0/MagiskManager-v6.0.0.apk",
+    "note": "https://raw.githubusercontent.com/topjohnwu/Magisk/cfe32f1a70eab9fd64d59ba53d15ed735e21c78f/app/src/full/res/raw/changelog.md"
+  },
+  "uninstaller": {
+    "link": "https://github.com/topjohnwu/Magisk/releases/download/v17.2/Magisk-uninstaller-20180921.zip"
+  },
+  "snet": {
+    "versionCode": "11",
+    "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/44dc7e75ab3f28b22c0cbccbb3d889f3fca3107b/snet.apk"
   },
   "magisk": {
     "version": "17.1",
@@ -11,12 +18,5 @@
     "link": "https://github.com/topjohnwu/Magisk/releases/download/v17.1/Magisk-v17.1.zip",
     "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/c555534c6ae5bd2b902aefa00223141c2a0e5371/notes.md",
     "md5": "0f1b25d88be4fd2ac5fb53e0584bcdc2"
-  },
-  "uninstaller": {
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/v17.1/Magisk-uninstaller-20180901.zip"
-  },
-  "snet": {
-    "versionCode": "11",
-    "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/44dc7e75ab3f28b22c0cbccbb3d889f3fca3107b/snet.apk"
   }
 }
