@@ -1,8 +1,5 @@
-## Magisk (e1a65276) (17204)
-- Major code re-organizations
-- Switch to general Samsung defex hexpatch, should be future proof unless code changes
-- Fix bootloops are some devices
+## Magisk (c2b01637) (17301)
+- In sync with public beta
 
-## Magisk Manager (e1a65276) (150)
-- Prevent apps with system UID from showing up in MagiskHide
-- Under-the-hood code improvements
+## Magisk Manager (c2b01637) (152)
+- In sync with public beta
