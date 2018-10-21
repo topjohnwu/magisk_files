@@ -1,18 +1,29 @@
-## 2018.9.21 Magisk v17.2
-(XDA Post: [here](https://forum.xda-developers.com/showpost.php?p=77678063&postcount=46))
+## 2018.10.20 Magisk v17.3
+(XDA Post: [here](https://forum.xda-developers.com/showpost.php?p=77933549&postcount=47))
 
-Unexpected early release due to a bug in Magisk Manager that never surfaced until some online repo triggered it LOL. But well this means you get several sweet features early too :)
+Welcome to the Magisk family, Pixel 3!
 
-### Magisk Manager Obfuscation
-There are some detection method out in the wild (e.g. PS4 Remote Play) that analyzes all installed APKs to find signs of Magisk Manager to mitigate the package name randomization feature within the app. The counter-counter-attack here is to do excessive obfuscation so it can no longer do so.
+I originally planned to do more changes to Magisk Manager before a new public release, but I think people can't wait to root their shiny new Pixel 3, so here we go!
 
-### New Communication Scheme
-However, for full obfuscation to be possible, it creates some issues. In MagiskSU's code, some Java class names in Magisk Manager are hardcoded as destinations to send requests and logging information. A completely new communication scheme is written from scratch to eliminate any class name assumptions in MagiskSU, so that 100% Magisk Manager obfuscation is achievable. This current release (Magisk Manager 6.0.0), however, is not built with full obfuscation due to the requirement to be backwards compatible with v17.1.
+### Up-to-date Documentations
+Some subtle details, design choices, developer guides are all added to the documentations!
 
-### Randomize Service Names
-Magisk injects several init services to startup the daemon. Some apps (e.g. Fate Grand Order) are updated to detect these specific service names to determine whether Magisk services are running on your device. MagiskInit is updated to randomly generate service names pre-init, so every time your device reboots it will use a different service name.
+For most average users though, the most interesting part would be the tutorial: **Best Practices for MagiskHide**, please take some time and check it out!
 
-### Updated Resetprop
-Android Pie introduced a new type of system property format that previous resetprop is not able to handle. Several properties, for example device fingerprint props, are therefore unable to be modified (many people modify device fingerprint to pass CTS). Resetprop is updated to use the upstream AOSP code base to process system properties.
+[Magisk Documentations](https://topjohnwu.github.io/Magisk/)
+
+### Boot Image Header v1
+Google updated the boot image header format from `v0` to `v1` and was first used on the Pixel 3. The new header supports recovery DTBOs, which won't be used on any A/B devices, including Pixel 3 so that isn't the main issue here. The new format stores its version number to an originally unused entry in the header to determine whether the extended header entries is used. However in some freaking devices like Samsung's, they have been using the supposedly "unused" entry as the size of an non-AOSP "extra section" for quite a long time. `magiskboot` is designed to support extracting these extra sections (because people use Samsung), but with the introduction of header v1, the tool couldn't interpret the image properly, and thus generating invalid boot images.
+
+`magiskboot`'s boot image parsing, unpacking and repacking code was rewritten with C++ to utilize the more powerful language features due to the complexity (because I still need to support freaking `PXA` format headers used by old Samsung devices...)
+
+### MagiskSU Rewrite
+Both the daemon and client side of MagiskSU is completely rewritten with improvements and optimizations, for example: simplified `su_info` caches, early ACK between daemon and client to prevent process freezing when denied, sending parsed command-line options instead of full arguments, and many more!
+
+### Samsung Defex Patches
+A hexpatch for removing Samsung's new KNOX feature: Defex Safeplace was actually already introduced in previous releases, but that solution wasn't ideal since each new kernel release would generate different patterns. A more general patch (which is only a single CPU instruction!) was discovered and included into this new release.
+
+### Magisk-Modules-Repo Moderation
+If you aren't aware, a team of zealous volunteer moderators were already starting to review new submission manually, being the gate keeper of our beloved Magisk-Modules-Repo. Hopefully this will prevent pointless/spam modules polluting the download section in Magisk Manager!
 
 ### Full Changelog: [here](https://forum.xda-developers.com/showpost.php?p=68966755&postcount=2)
