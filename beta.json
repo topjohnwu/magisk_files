@@ -13,8 +13,8 @@
     "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/44dc7e75ab3f28b22c0cbccbb3d889f3fca3107b/snet.apk"
   },
   "magisk": {
-    "version": "17.3",
-    "versionCode": "17300",
+    "version": "17.2",
+    "versionCode": "17200",
     "link": "https://github.com/topjohnwu/Magisk/releases/download/v17.2/Magisk-v17.2.zip",
     "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/318d9da32a583a4880929a85561faeff3c18ac6b/notes.md",
     "md5": "a8b466bb888306cc6adbb8ab365d03c6"
