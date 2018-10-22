@@ -1,5 +1,7 @@
-## 2018.10.20 Magisk v17.3
+## 2018.10.22 Magisk v17.3
 (XDA Post: [here](https://forum.xda-developers.com/showpost.php?p=77933549&postcount=47))
+
+(A hot fix with some minor changes is published with verison code `17302`, the version number is the same, v17.3)
 
 Welcome to the Magisk family, Pixel 3!
 
