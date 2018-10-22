@@ -1,5 +1,5 @@
-## Magisk (c2b01637) (17301)
-- In sync with public beta
+## Magisk (018c0064) (17303)
+- Fix repacking segmentation fault issues
 
 ## Magisk Manager (c2b01637) (152)
 - In sync with public beta
