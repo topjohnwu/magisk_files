@@ -1,5 +1,7 @@
-## Magisk (018c0064) (17303)
-- Fix repacking segmentation fault issues
+## Magisk (675d6d83) (17304)
+- Migrate MagiskBoot to C++, please check for regressions
 
-## Magisk Manager (c2b01637) (152)
-- In sync with public beta
+## Magisk Manager (675d6d83) (153)
+- Prevent crashes when other su exists
+- Update XML string matching code
+- Dark theme adjustments
