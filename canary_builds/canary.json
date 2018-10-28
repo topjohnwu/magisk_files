@@ -1,22 +1,22 @@
 {
   "app": {
-    "version": "6.0.1-675d6d83",
-    "versionCode": "153",
+    "version": "6.0.1-9b063856",
+    "versionCode": "155",
     "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/app-full-debug.apk",
     "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/notes.md"
   },
   "magisk": {
-    "version": "17.4-675d6d83",
-    "versionCode": "17304",
+    "version": "17.4-9b063856",
+    "versionCode": "17306",
     "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/magisk-debug.zip",
     "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/notes.md",
-    "md5": "d8209396b0d4927c55f4b585ddc52bfc"
+    "md5": "dc7337743ac5e76e0114daa97caab31b"
   },
   "uninstaller": {
     "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/magisk-uninstaller.zip"
   },
   "snet": {
-    "versionCode": "11",
+    "versionCode": "12",
     "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/snet.apk"
   }
 }
