@@ -1,4 +1,4 @@
-## Magisk (9b063856) (17306)
+## Magisk (ceb51bb1) (17307)
 - Modify/create `magisk.db` completely natively within `magisk`
 - Expose CLI in `magisk` to interact with `magisk.db` directly via SQL for Magisk Manager
 - Make sure `magisklogd` is properly initialized before going further
