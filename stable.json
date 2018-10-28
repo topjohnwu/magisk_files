@@ -9,8 +9,8 @@
     "link": "https://github.com/topjohnwu/Magisk/releases/download/v17.3/Magisk-uninstaller-20181020.zip"
   },
   "snet": {
-    "versionCode": "11",
-    "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/44dc7e75ab3f28b22c0cbccbb3d889f3fca3107b/snet.apk"
+    "versionCode": "12",
+    "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/b66b1a914978e5f4c4bbfd74a59f4ad371bac107/snet.apk"
   },
   "magisk": {
     "version": "17.1",
