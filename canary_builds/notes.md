@@ -1,7 +1,5 @@
-## Magisk (411ea56a) (17309)
-- Mount `magisk.img` with `noatime` flag for better performance
-- Add `FLAG_INCLUDE_STOPPED_PACKAGES` in broadcasts to force Magisk Manager to accept requests
-- Fully migrate Magisk to C++
+## Magisk (59ba350f) (17310)
+- Massively modernize current code base with more fancy C++ code
 
 ## Magisk Manager (9b063856) (155)
 - Support managing `magisk.db` completely via cmdline
