@@ -1,5 +1,6 @@
-## Magisk (59ba350f) (17310)
-- Massively modernize current code base with more fancy C++ code
+## Magisk (4cdd66ce) (17312)
+- Migrate MagiskInit to C++
+- Native code C++ migration all done
 
 ## Magisk Manager (9b063856) (155)
 - Support managing `magisk.db` completely via cmdline
