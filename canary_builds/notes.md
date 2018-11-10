@@ -1,6 +1,5 @@
-## Magisk (4cdd66ce) (17312)
-- Migrate MagiskInit to C++
-- Native code C++ migration all done
+## Magisk (c61c3ae0) (17313)
+- Fix su shell environment setup
 
 ## Magisk Manager (9b063856) (155)
 - Support managing `magisk.db` completely via cmdline
