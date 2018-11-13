@@ -1,9 +1,7 @@
-## Magisk (c61c3ae0) (17313)
-- Fix su shell environment setup
+## Magisk (89e0be00) (17314)
+- Prevent unmounting non-custom mount points in MagiskHide
+- Prevent infinite loop when a target process of MagiskHide is killed
+- Fix a bug causing `magiskhide` CLI freezing
 
-## Magisk Manager (9b063856) (155)
-- Support managing `magisk.db` completely via cmdline
-- Fix a bug when root is always denied for the first time when granting permission in the user dialog
-- Revert dark theme adjustments
-- Update PayPal donation link
-- Upgrade snet extension pack
+## Magisk Manager (89e0be00) (156)
+- Update `libsu` to `2.0.3`
