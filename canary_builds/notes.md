@@ -1,10 +1,9 @@
-## Magisk (ec472309) (17317)
-- Update multiple external dependencies
-- Fix a bug causing `SIGWINCH` (terminal window size change) not followed
-- Remove `/.backup` folder on boot so it can not be used for detection
-- Use component names as MagiskHide targets. This allows MagiskHide to target all possible processes from an application.
-- Fix a bug that caused Magisk Manager hiding errors
+## Magisk (a9f265a5) (17318)
+- Properly kill processes when initializing/add/remove targets from hide list
+- Use raw `execve` for running external programs since some `libc` wrappers are problematic
+- Add built-in procfs `hidepid=2` patch for devices vulnerable of the bug
 
-## Magisk Manager (ec472309) (158)
-- Update translations
-- Read install config from `/sbin/.magisk/config` since `/.backup` no longer exists
+## Magisk Manager (a9f265a5) (159)
+- Rename application label to **Magic** to prevent detection
+- Fix a bug that cause incorrect module UI if module does not have proper metadata
+- Launch repackaged/restored Magisk Manager automatically (better user experience)
