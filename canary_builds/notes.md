@@ -1,10 +1,7 @@
-## Magisk (07bfdf3e) (17319)
-- MagiskPolicy massive upgrade: more features
-- Remove all `AUDITDENY` when applying Magisk rules so all AVC rejections will be logged
+## Magisk (08cd5b81) (17320)
+- Update FrankeNDK (compiler toolchain)
+- New compiler flag for slightly smaller binary size
+- Repair v1 `boot_img_hdr` if corruption detected
 
-## Magisk Manager (07bfdf3e) (160)
-- No longer uses platform `DownloadManager`: all downloads are handled manually.
-This should prevent delays (sometimes download won't even start!) caused by high system usage
-- Rich notifications when downloading modules, Magisk zip, and Magisk Manager
-- Rich notifications when hiding Magisk Manager / restoring Magisk Manager
-- Say goodbye to the deprecated `ProgressDialog`!
+## Magisk Manager (08cd5b81) (161)
+- Default app name back to **Magisk Manager**, will switch to **Manager** once hidden (repackaged)
