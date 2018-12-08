@@ -1,31 +1,30 @@
-## 2018.10.22 Magisk v17.3
-(XDA Post: [here](https://forum.xda-developers.com/showpost.php?p=77933549&postcount=47))
+## 2018.12.7 Magisk v18.0
 
-(A hot fix with some minor changes is published with verison code `17302`, the version number is the same, v17.3)
+Here comes a stable release, this time with quite a few major updates!
 
-Welcome to the Magisk family, Pixel 3!
+### MagiskHide Improvements
+Starting from v18, the process monitor matches component names instead of process names. Android allow app services to name their process arbitrarily, and many apps starting to use dedicated services to detect root; it used to require adding all of these service process names to the list to hide Magisk effectively. Component names have the format: `<package name>/<java class name>`, which means we can always know which application spawned a given process.
 
-I originally planned to do more changes to Magisk Manager before a new public release, but I think people can't wait to root their shiny new Pixel 3, so here we go!
+**TL;DR, ALL processes spawned from the applications on the hide list will be targeted.**
 
-### Up-to-date Documentations
-Some subtle details, design choices, developer guides are all added to the documentations!
+Recently I discovered a *very widespread Linux kernel bug* affecting tons of Android devices (full write-up: [Medium Article](https://medium.com/@topjohnwu/from-anime-game-to-android-system-security-vulnerability-9b955a182f20)). This bug exposes the supposedly protected `procfs`, which is abused in some apps to detect Magisk with information leaked from other processes. Magisk will patch this bug on all Android 7.0+ devices. Yes, a fully effective MagiskHide requires the enhanced Android Sandbox in modern Android versions.
 
-For most average users though, the most interesting part would be the tutorial: **Best Practices for MagiskHide**, please take some time and check it out!
+### Path Changes
+The name of the folder `/sbin/.core` is confusing and will no longer be used; it is replaced with `/sbin/.magisk`. Another major change is the location to store general boot scripts. As these boot scripts should still run even if `magisk.img` is not mounted, they are moved out of `magisk.img`, from `<img>/.core/<stage>.d` to `/data/adb/<stage>.d` (stage is either `post-fs-data` or `service`). Say goodbye to stupid paths like `/sbin/.core/img/.core/post-fs-data.d`!
 
-[Magisk Documentations](https://topjohnwu.github.io/Magisk/)
+Quick recap:
 
-### Boot Image Header v1
-Google updated the boot image header format from `v0` to `v1` and was first used on the Pixel 3. The new header supports recovery DTBOs, which won't be used on any A/B devices, including Pixel 3 so that isn't the main issue here. The new format stores its version number to an originally unused entry in the header to determine whether the extended header entries is used. However in some freaking devices like Samsung's, they have been using the supposedly "unused" entry as the size of an non-AOSP "extra section" for quite a long time. `magiskboot` is designed to support extracting these extra sections (because people use Samsung), but with the introduction of header v1, the tool couldn't interpret the image properly, and thus generating invalid boot images.
+- New `magisk.img` mountpoint: `/sbin/.magisk/img`
+- New internal busybox PATH: `/sbin/.magisk/busybox`
+- The folder `<img>/.core` is no longer used in any places. `magisk.img` is solely used for storing modules, no other functionality depends on it.
+- **Symlinks are created so all old paths will still work. None of the existing apps/scripts depending on these internal paths should break, but please migrate to the new paths ASAP.**
 
-`magiskboot`'s boot image parsing, unpacking and repacking code was rewritten with C++ to utilize the more powerful language features due to the complexity (because I still need to support freaking `PXA` format headers used by old Samsung devices...)
+### Dropping Legacy Support
+**The NEXT Magisk Manager upgrade (not this one) will only support v18+, please upgrade ASAP.** Magisk Manager is always designed to be fully functional across a wide range of Magisk versions. However, to enforce full obfuscation, I will have to drop legacy support eventually.
 
-### MagiskSU Rewrite
-Both the daemon and client side of MagiskSU is completely rewritten with improvements and optimizations, for example: simplified `su_info` caches, early ACK between daemon and client to prevent process freezing when denied, sending parsed command-line options instead of full arguments, and many more!
+This is also a good opportunity to push the whole community forward, all module developers should forget about backward compatibility (e.g. stop supporting the old Magisk paths, please don't torture yourself...). I expect very few structural changes in the near future, so again, please upgrade ASAP :)
 
-### Samsung Defex Patches
-A hexpatch for removing Samsung's new KNOX feature: Defex Safeplace was actually already introduced in previous releases, but that solution wasn't ideal since each new kernel release would generate different patterns. A more general patch (which is only a single CPU instruction!) was discovered and included into this new release.
-
-### Magisk-Modules-Repo Moderation
-If you aren't aware, a team of zealous volunteer moderators were already starting to review new submission manually, being the gate keeper of our beloved Magisk-Modules-Repo. Hopefully this will prevent pointless/spam modules polluting the download section in Magisk Manager!
+### Modern C++ Code Base
+Although this has nothing to do with the end user, tons of effort was done to migrate Magisk to a more modern C++ code base instead of the previous good plain old C. This makes the code easier to maintain and allows me to utilized many C++ language features.
 
 ### Full Changelog: [here](https://forum.xda-developers.com/showpost.php?p=68966755&postcount=2)
