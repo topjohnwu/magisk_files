@@ -1,7 +1,7 @@
 {
   "app": {
-    "version": "6.1.0-d73127b1",
-    "versionCode": "176",
+    "version": "6.1.0-118a9f22",
+    "versionCode": "178",
     "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/app-full-release.apk",
     "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/notes.md"
   },
