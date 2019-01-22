@@ -1,7 +1,8 @@
-## Magisk (d73127b1) (18006)
+## Magisk (b7f69238) (18007)
 - Change the way update-binary is bundled
 - Switch to use STL (llvm libc++)
 - Support down to Android 4.2 (with resetprop, magiskhide, and modules force disabled)
+- Fix segfault on several devices
 
 ## Magisk Manager (118a9f22) (178)
 - Minimize memory usage for verify and sign boot images
