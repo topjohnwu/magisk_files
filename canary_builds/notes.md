@@ -1,8 +1,8 @@
-## Magisk (4b4aa148) (18009)
-- Several under-the-hood changes
-- Fix a bug that cause switching to UIDs other than `0` fails
+## Magisk (56d2fb9a) (18010)
+- Allow installation on Android 4.1
 
-## Magisk Manager (4b4aa148) (182)
-- Major UI redesign
-- Fix SafetyNet checks on release builds
-- Fix light theme colors
+## Magisk Manager (56d2fb9a) (183)
+- Fix Splash screen on KitKat+
+- Prevent home screen UI gliches
+- Optimize repo list fetching
+- Support Android 4.1
