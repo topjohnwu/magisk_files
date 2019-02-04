@@ -1,30 +1,17 @@
-## 2018.12.7 Magisk v18.0
+# 2019.2.4 Magisk v18.1
 
-Here comes a stable release, this time with quite a few major updates!
+What is a better way to celebrate Chinese New Year than a new Magisk update!
 
-### MagiskHide Improvements
-Starting from v18, the process monitor matches component names instead of process names. Android allow app services to name their process arbitrarily, and many apps starting to use dedicated services to detect root; it used to require adding all of these service process names to the list to hide Magisk effectively. Component names have the format: `<package name>/<java class name>`, which means we can always know which application spawned a given process.
+### EMUI 9 Support
+Welcome on board "again", Huawei! Even though Huawei had officially blocked bootloader unlocks, people still love to buy them (duh), and there are paid services that unlock Huawei bootloaders. So hey, get Magisk installed on that bad boy! One caveat is that since Huawei have changed the partitions, special workarounds has to be done. Details and instructions are in the newly created [instruction page](https://topjohnwu.github.io/Magisk/install.html)
 
-**TL;DR, ALL processes spawned from the applications on the hide list will be targeted.**
+### Support Down to Android 4.2
+Because why not, it was quite a lot of fun LOL. All devices running KitKat and higher will have all features enabled. MagiskHide and resetprop aren't possible on Jellybean, and Magic Mount (modules) is temporarily disabled; basically it only works as a root solution for now. Android 4.1 isn't 100% usable yet, so installation is also temporarily blocked. Eventually, all Jellybean devices will have full Magic Mount and MagiskSU support.
 
-Recently I discovered a *very widespread Linux kernel bug* affecting tons of Android devices (full write-up: [Medium Article](https://medium.com/@topjohnwu/from-anime-game-to-android-system-security-vulnerability-9b955a182f20)). This bug exposes the supposedly protected `procfs`, which is abused in some apps to detect Magisk with information leaked from other processes. Magisk will patch this bug on all Android 7.0+ devices. Yes, a fully effective MagiskHide requires the enhanced Android Sandbox in modern Android versions.
+### Major Magisk Manager Update
+Aside from the obvious major UI overhaul, tons of little user experience and performance improvements are also added. The app is finally less crappy now :)
 
-### Path Changes
-The name of the folder `/sbin/.core` is confusing and will no longer be used; it is replaced with `/sbin/.magisk`. Another major change is the location to store general boot scripts. As these boot scripts should still run even if `magisk.img` is not mounted, they are moved out of `magisk.img`, from `<img>/.core/<stage>.d` to `/data/adb/<stage>.d` (stage is either `post-fs-data` or `service`). Say goodbye to stupid paths like `/sbin/.core/img/.core/post-fs-data.d`!
-
-Quick recap:
-
-- New `magisk.img` mountpoint: `/sbin/.magisk/img`
-- New internal busybox PATH: `/sbin/.magisk/busybox`
-- The folder `<img>/.core` is no longer used in any places. `magisk.img` is solely used for storing modules, no other functionality depends on it.
-- **Symlinks are created so all old paths will still work. None of the existing apps/scripts depending on these internal paths should break, but please migrate to the new paths ASAP.**
-
-### Dropping Legacy Support
-**The NEXT Magisk Manager upgrade (not this one) will only support v18+, please upgrade ASAP.** Magisk Manager is always designed to be fully functional across a wide range of Magisk versions. However, to enforce full obfuscation, I will have to drop legacy support eventually.
-
-This is also a good opportunity to push the whole community forward, all module developers should forget about backward compatibility (e.g. stop supporting the old Magisk paths, please don't torture yourself...). I expect very few structural changes in the near future, so again, please upgrade ASAP :)
-
-### Modern C++ Code Base
-Although this has nothing to do with the end user, tons of effort was done to migrate Magisk to a more modern C++ code base instead of the previous good plain old C. This makes the code easier to maintain and allows me to utilized many C++ language features.
+### Final Words
+I'm aware that there are apps updated to detect Magisk, however no MagiskHide improvements efforts are done in this release; v18.1 is aimed to be as stable as possible. Stay tuned for future public betas, or if you are more adventurous, jump on the Canary Channel bandwagon for more aggressive hiding techniques :)
 
 ### Full Changelog: [here](https://forum.xda-developers.com/showpost.php?p=68966755&postcount=2)
