@@ -1,9 +1,12 @@
-# Magisk (93c9590b) (18011)
-- Update to public release
-- Temporary block installation on API 16
-- Fix segmentation fault when getprop if resetprop isn't supported (pre 4.4)
+# Magisk (8a5b6f2b) (18102)
+- Move sbin tmpfs overlay creation to early-init magiskinit daemon: simplify `magisk` startup
+- Harden socket protection: no other binary other than the exact same `magisk` binary which started the server can access sockets. This is not only a security feature, but also mitigates some known detection methods
+- Remove `magisklogd`: logcat gobbling is now completely handled within the same `magiskd` process
+- Use timestamps to skip old logs instead of clearing the whole logcat buffer when failure
+- Only try one time after unexpected logcat output EOF
+- Overall, the code handling logcat is completely rewritten from scratch
 
-# Magisk Manager (93c9590b) (184)
+# Magisk Manager (b3140276) (186)
 - Update to public release
 - UI adjustments: make UI responsive so text will not overlap other components
 - Add DirectBoot support to receivers and SuRequestActivity
