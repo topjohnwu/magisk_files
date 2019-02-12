@@ -1,14 +1,8 @@
-# Magisk (e05cdc83) (18104)
-- Move sbin tmpfs overlay creation to early-init magiskinit daemon: simplify `magisk` startup
-- Harden socket protection: no other binary other than the exact same `magisk` binary which started the server can access sockets. This is not only a security feature, but also mitigates some known detection methods
-- Remove `magisklogd`: logcat gobbling is now completely handled within the same `magiskd` process
-- Use timestamps to skip old logs instead of clearing the whole logcat buffer when failure
-- Only try one time after unexpected logcat output EOF
-- Overall, the code handling logcat is completely rewritten from scratch
-- (18103) Fix boot loop on non system-as-root devices
-- (18104) Fix EMUI 9 support
+# Magisk (e5940168) (18105)
+- Remove usage of `magisk.img` - this should fix tons of tricky module related bugs! \
+Existing installed modules will be migrated, and all existing modules are still compatible.
+- Remove `imgtool` as it is redundant now
 
-# Magisk Manager (b3140276) (186)
-- Update to public release
-- UI adjustments: make UI responsive so text will not overlap other components
-- Add DirectBoot support to receivers and SuRequestActivity
+# Magisk Manager (e5940168) (187)
+- Move `minSdkVersion` to 17
+- Update translations
