@@ -1,7 +1,5 @@
-# Magisk (e5940168) (18105)
-- Remove usage of `magisk.img` - this should fix tons of tricky module related bugs! \
-Existing installed modules will be migrated, and all existing modules are still compatible.
-- Remove `imgtool` as it is redundant now
+# Magisk (6412bfc7) (18106)
+- Completely new MagiskHide implementation! Massive kudos to [@arter97](https://twitter.com/arter97) for the initial contribution. This new process monitoring method is 100x more reliable, less crashes, and most importantly does not depend on logcat parsing! The basic idea is monitoring target APKs and filter processes with its UID.
 
 # Magisk Manager (e5940168) (187)
 - Move `minSdkVersion` to 17
