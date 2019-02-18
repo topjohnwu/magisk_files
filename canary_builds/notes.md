@@ -1,6 +1,8 @@
-# Magisk (6412bfc7) (18106)
-- Completely new MagiskHide implementation! Massive kudos to [@arter97](https://twitter.com/arter97) for the initial contribution. This new process monitoring method is 100x more reliable, less crashes, and most importantly does not depend on logcat parsing! The basic idea is monitoring target APKs and filter processes with its UID.
+## Magisk (3ebc886f) (18107)
+- Switch to monitoring `/data/system/packages.xml` instead of traversing `/data/app`. This should also fix issues with hiding system apps
+- Fix bootloops when removing system root in Android < 5.0
+- Add some SELinux rules for Samsung deodex ROMs
+- Fix bootloops on devices with `init.rc` that has no newline at end of file (seriously, WTF are these OEMs doing)
 
-# Magisk Manager (e5940168) (187)
-- Move `minSdkVersion` to 17
+## Magisk Manager (3ebc886f) (188)
 - Update translations
