@@ -6,11 +6,11 @@
     "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/notes.md"
   },
   "magisk": {
-    "version": "18.2-3ebc886f",
-    "versionCode": "18107",
+    "version": "18.2-660e0dc0",
+    "versionCode": "18108",
     "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/magisk-debug.zip",
     "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/notes.md",
-    "md5": "d5f2d85130c8f8a835b127caae0c83fc"
+    "md5": "e7c6aa73a76edd6ecf404fb2d1525d7c"
   },
   "uninstaller": {
     "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/canary_builds/magisk-uninstaller.zip"
