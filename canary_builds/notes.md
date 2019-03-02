@@ -1,7 +1,9 @@
-## Magisk (e72c6685) (18111)
-- Use `ACTION_REBOOT` broadcast to workaround stupid 
-OEM intent filter restrictions
-- Support A only system-as-root devices.
+## Magisk (e8f35b02) (18112)
+- Application component granularity MagiskHide:
+Starting from this release, you can target specific components
+of an app as a target. If you want to completely hide from an
+app, you should select all of its components as targets.
+- Improvements to MagiskHide to hijack target processes sooner
 
-## Magisk Manager (e72c6685) (191)
-- Support the new broadcast action
+## Magisk Manager (e8f35b02) (192)
+- Support the new MagiskHide system
