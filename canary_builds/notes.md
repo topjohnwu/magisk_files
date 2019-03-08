@@ -1,10 +1,14 @@
-## Magisk (e8f35b02) (18112)
-- Application component granularity MagiskHide:
-Starting from this release, you can target specific components
-of an app as a target. If you want to completely hide from an
-app, you should select all of its components as targets.
-- Improvements to MagiskHide to hijack target processes sooner
+## Magisk (c345633d) (18113)
+- Zygote ptrace-ing MagiskHide: APK inotify based process monitoring
+is shown to be sometimes too slow for hijacking apps. As a result, I
+rewritten MagiskHide 100% from scratch, again, with a new implementation.
+This new implementation will use the `ptrace` Linux API to monitor zygote,
+which effectively hijacks a target app **before** it is even started.
+- MagiskHide now accepts different apps with the same process as separate
+targets. This allows MicroG DroidGuard helper to be also added to the
+default hide list.
+- Support Android Q's new init setup
+- Several `magiskboot` improvements (for dev use only)
 
-## Magisk Manager (e8f35b02) (193)
-- Support the new MagiskHide system
-- (193) Rebuild release build (build cache error...)
+## Magisk Manager (c345633d) (194)
+- Fix Magisk Hide fragment crashing on Android lower than Nougat
