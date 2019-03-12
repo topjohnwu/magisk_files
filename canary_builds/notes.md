@@ -1,8 +1,5 @@
-## Magisk (51110866) (18116)
-- Fix a bug that causes ART framework boot images failed to load
-and result to extremely serious performance degradation.
-- More zygote ptracing optimizations
+## Magisk (5072a678) (18117)
+- Even more zygote ptracing optimizations
 
-## Magisk Manager (a46e2557) (196)
-- Show canary channels directly in update channels if the
-user is already using canary Magisk Manager builds
+## Magisk Manager (5072a678) (197)
+- Some minor fixes
