@@ -1,5 +1,7 @@
-## Magisk (5072a678) (18117)
-- Even more zygote ptracing optimizations
+## Magisk (ecf3d303) (18118)
+- Fix potential crash when `packages.xml` have unexpected inputs
 
-## Magisk Manager (5072a678) (197)
-- Some minor fixes
+## Magisk Manager (ecf3d303) (198)
+- New fancy MagiskHide list UI:
+You can now toggle either all processes of an app at once,
+or a single process at a time.
