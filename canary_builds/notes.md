@@ -1,7 +1,12 @@
-## Magisk (ecf3d303) (18118)
-- Fix potential crash when `packages.xml` have unexpected inputs
+## Magisk (8893cbd6) (18119)
+- Support boot image header v2
+- Make sure files in `rootfs` is properly labeled with correct context:
+Android Q init assumes root directory to always reside in system
+partitions and never run restorecon to restore `rootfs` selabels.
+We have to do it ourselves
+- Support Android Q split policy setup
+- Add new `--load-split` option to `magiskpolicy`
 
-## Magisk Manager (ecf3d303) (198)
-- New fancy MagiskHide list UI:
-You can now toggle either all processes of an app at once,
-or a single process at a time.
+## Magisk Manager (8893cbd6) (199)
+- Fix a bug that settings don't reflect real configs
+- Prevent SafetyNet from being removed from hide list
