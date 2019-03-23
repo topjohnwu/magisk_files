@@ -1,6 +1,8 @@
-## Magisk (945f8810) (18121)
-- Support system-as-root devices with `/sepolicy` file
+## Magisk (f5f7fd91) (18122)
+- Add `com.android.google gms` to default hide list.
+This should fix Google Pay. You might need to wipe Google Play Service's data to make
+things work properly.
+- Minor fixes and improvements
 
-## Magisk Manager (8893cbd6) (199)
-- Fix a bug that settings don't reflect real configs
-- Prevent SafetyNet from being removed from hide list
+## Magisk Manager (f5f7fd91) (200)
+- Fix additional setup
