@@ -1,17 +1,29 @@
-# 2019.2.4 Magisk v18.1
+# 2019.3.28 Magisk v19.0
 
-What is a better way to celebrate Chinese New Year than a new Magisk update!
+I would say this is one of my most ambitious release of all time! Due to the extremely massive changes, this release will be a public beta. Calling it v18.2 doesn't do it justice, so v19.0 we go.
 
-### EMUI 9 Support
-Welcome on board "again", Huawei! Even though Huawei had officially blocked bootloader unlocks, people still love to buy them (duh), and there are paid services that unlock Huawei bootloaders. So hey, get Magisk installed on that bad boy! One caveat is that since Huawei have changed the partitions, special workarounds has to be done. Details and instructions are in the newly created [instruction page](https://topjohnwu.github.io/Magisk/install.html)
+## Magisk Module installer
+**Magisk module developers: pay extra attention!** A completely new [Magisk Module Installer](https://github.com/topjohnwu/magisk-module-installer) replaces the old Magisk module template. This new format decouples **ALL** installation logic from modules, and encourages developers to use the provided API for installation. This new format is **ENFORCED**, meaning all existing modules should upgrade ASAP, and new modules are **REQUIRED** to follow the rules.
 
-### Support Down to Android 4.2
-Because why not, it was quite a lot of fun LOL. All devices running KitKat and higher will have all features enabled. MagiskHide and resetprop aren't possible on Jellybean, and Magic Mount (modules) is temporarily disabled; basically it only works as a root solution for now. Android 4.1 isn't 100% usable yet, so installation is also temporarily blocked. Eventually, all Jellybean devices will have full Magic Mount and MagiskSU support.
+Carefully read through the [updated docs](https://topjohnwu.github.io/Magisk/guides.html)!
 
-### Major Magisk Manager Update
-Aside from the obvious major UI overhaul, tons of little user experience and performance improvements are also added. The app is finally less crappy now :)
+**Warning: All existing modules that does not use the new module format will be automatically removed on May 1st, 2019. Module devs: upgrade your existing modules ASAP!**
 
-### Final Words
-I'm aware that there are apps updated to detect Magisk, however no MagiskHide improvements efforts are done in this release; v18.1 is aimed to be as stable as possible. Stay tuned for future public betas, or if you are more adventurous, jump on the Canary Channel bandwagon for more aggressive hiding techniques :)
+## Imageless Magisk
+Since the existence of Magisk, all modules are stored within an EXT4 image which will be loop mounted at boot. This approach has a few problems: resizing the image is a huge headache (no live resizing, `resize2fs` on some devices refuse to work properly), and also MANY devices using F2FS ships a broken driver with the kernel, causing EXT4 loop devices unable to be mounted at all. All these problems come to an end now: modules are now directly stored in `/data`! Backwards compatibility is provided, for modules that uses the official module template, installation should work just fine.
+
+**Warning: Although module migration was tested, there are still chances that your modules will get lost in the process. Be prepared to reinstall your existing modules in that case.**
+
+## Native 64 Bit is Back
+At one point in history, Magisk uses native 64 binaries. However due to binary size considerations, all binaries was switched to 32 bit. Starting from v19, all static binaries are still 32 bit only, but the most important part: the main `magisk` binary now runs in native 64 bit on supported devices.
+
+## Zygote Ptrace Based MagiskHide
+MagiskHide used to use `logcat` to monitor activity manager events for new process creation. That method is extremely unreliable: even with constant improvements since introduction, it is still not working 100% of the time. Here comes a fundamentally new approach: ptrace the zygote process and step through all fork events. In layman's term, this new method is able to target a process before it even starts to run! The code for it is extremely tricky, but it was tested for quite a while in the canary channel, so I'm confident enough to release this to the public :)
+
+## Android Q
+Full support for Android Q Beta 1 is also introduced in this release. However, you cannot use it on the Pixel 3 (XL) due to the fact that Google decided to use logical partitions on the 3rd gen Pixels starting with Q. A solution is still WIP, please stay tuned!
+
+## Final Words
+What you can expect in upcoming releases: Samsung S10 support, and full logical partition support. Also, I *AM* aware of Google Pay issues, but these are not my main focus now since there are still tons of other issues for me to focus on. Several discussion threads on XDA provide seemingly working solutions, please do some research on your own.
 
 ### Full Changelog: [here](https://forum.xda-developers.com/showpost.php?p=68966755&postcount=2)
