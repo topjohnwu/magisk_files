@@ -1,5 +1,12 @@
-## Magisk (3eae9494) (19001)
-- Sync with official v19.0
+## Magisk (da3937ff) (19002)
+- Support recovery based installation
+- Remove simple mount: that mode is proven to have no advantage over
+normal post-fs-data mode
+- Support Android Q beta 2 updated APEX system
+- Use boot_complete triggers for auto APK installation
+- `magiskinit` now writes kernel logs in debug mode
 
-## Magisk Manager (5b30c774) (204)
-- Sync with official v7.1.1
+## Magisk Manager (da3937ff) (205)
+- Support recovery based installation
+- Support patching full ODIN firmware packages
+- Update Markdown rendering
