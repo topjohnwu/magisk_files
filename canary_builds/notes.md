@@ -1,13 +1,11 @@
-## Magisk (82ea9db9) (19003)
-- Support recovery based installation
-- Remove simple mount: that mode is proven to have no advantage over
-normal post-fs-data mode
-- Support Android Q beta 2 updated APEX system
-- Use boot_complete triggers for auto APK installation
-- `magiskinit` now writes kernel logs in debug mode
-- (19003) Fix a bug that caused old Samsungs early-mount failures
+## Magisk (8d4c4072) (19004)
+- Don't allow adding new files in mount point roots (`/system` and `/vendor`)
+- Use our own devices nodes for mounting mirrors and modules to keep track of custom mounts
+- Directly start activities in Magisk Manager for native-app communication. This better supports Android Q and also workaround many Chinese ROM broadcast restrictions added to the system
 
-## Magisk Manager (da3937ff) (205)
-- Support recovery based installation
-- Support patching full ODIN firmware packages
-- Update Markdown rendering
+## Magisk Manager (8d4c4072) (206)
+- Fix patch boot image on non-rooted devices
+- Remove patch format options as it now uses the same format as the input file
+- Allow multiple modules to be downloaded at the same time
+- Lock orientation of `SuRequestActivity` so the dialog will not be destroyed when changing orientation
+- Support new native-app communication from native Magisk
