@@ -1,11 +1,8 @@
-## Magisk (8d4c4072) (19004)
-- Don't allow adding new files in mount point roots (`/system` and `/vendor`)
-- Use our own devices nodes for mounting mirrors and modules to keep track of custom mounts
-- Directly start activities in Magisk Manager for native-app communication. This better supports Android Q and also workaround many Chinese ROM broadcast restrictions added to the system
+## Magisk (54d1207f) (19005)
+- For detecting volume up: track all input devices that is supported. In theory should support more devices such as unlocked Snapdragon S10s
+- Monitor `app_process` binary usage in case multiple zygote daemons are spawned
+- Simplify `/sbin` `tmpfs` overlay setup: all procedures are now done in pre-init stage, could fix some bootloop issues on some devices
 
-## Magisk Manager (8d4c4072) (206)
-- Fix patch boot image on non-rooted devices
-- Remove patch format options as it now uses the same format as the input file
-- Allow multiple modules to be downloaded at the same time
-- Lock orientation of `SuRequestActivity` so the dialog will not be destroyed when changing orientation
-- Support new native-app communication from native Magisk
+## Magisk Manager (54d1207f) (207)
+- Upgrade `libsu`
+- Update `post_ota.sh`
