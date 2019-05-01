@@ -1,8 +1,5 @@
-## Magisk (54d1207f) (19005)
-- For detecting volume up: track all input devices that is supported. In theory should support more devices such as unlocked Snapdragon S10s
-- Monitor `app_process` binary usage in case multiple zygote daemons are spawned
-- Simplify `/sbin` `tmpfs` overlay setup: all procedures are now done in pre-init stage, could fix some bootloop issues on some devices
+## Magisk (4040a024) (19101)
+- Upstream release v19.1
 
-## Magisk Manager (54d1207f) (207)
-- Upgrade `libsu`
-- Update `post_ota.sh`
+## Magisk Manager (4040a024) (209)
+- Upstream release v7.1.2
