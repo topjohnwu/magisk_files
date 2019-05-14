@@ -6,6 +6,5 @@
 This fix issues with users locking Magisk Manager with app lock, and prevent
 video apps get messed up when an app is requesting root in the background.
 
-## Magisk Manager (80cd85b0) (211)
-- Fix locale settings not working properly
-- Fix MagiskHide list not properly sorted
+## Magisk Manager (0bdbcad8) (212)
+- Fix Magisk Manager repackaging error on Android 9.0
