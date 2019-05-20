@@ -5,7 +5,7 @@ Mostly bug fixes and small improvements, enjoy :)
 - [General] Fix uninstaller
 - [General] Fix bootloops on some devices with tmpfs mounting to /data
 - [MagiskInit] Add Kirin hi6250 support
-- [MagiskSU] Stop claiming device focus for su logging/notify if feasible
+- [MagiskSU] Stop claiming device focus for su logging/notify if feasible.  
 This fix issues with users locking Magisk Manager with app lock, and prevent
 video apps get messed up when an app is requesting root in the background.
 
