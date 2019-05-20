@@ -1,12 +1,16 @@
-# 2019.5.1 Magisk v19.1
-Finally, a lovely stable release!
+# 2019.5.20 Magisk v19.2
+Mostly bug fixes and small improvements, enjoy :)
 
-For those that were using v18.1, here are some quick highlights of v19.0
+## Magisk v19.2
+- [General] Fix uninstaller
+- [General] Fix bootloops on some devices with tmpfs mounting to /data
+- [MagiskInit] Add Kirin hi6250 support
+- [MagiskSU] Stop claiming device focus for su logging/notify if feasible
+This fix issues with users locking Magisk Manager with app lock, and prevent
+video apps get messed up when an app is requesting root in the background.
 
-- Imageless Magisk: Although module migration was tested, there are still chances that your modules will get lost in the process. Be prepared to reinstall your existing modules in that case.
-- Native 64-bit support
-- Zygote Ptrace Based MagiskHide
-
-Other than adding support for Samsung system-as-root devices, this release is mostly bug fixes from v19.0. Enjoy :)
+## Magisk Manager v7.2.0
+- Huge UI overhaul
+- More sweet changes coming in the future!
 
 ### Full Changelog: [here](https://forum.xda-developers.com/showpost.php?p=68966755&postcount=2)
