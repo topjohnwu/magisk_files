@@ -2,6 +2,5 @@
 - Get UID from data folder instead of parsing `packages.xml`, should simplify the process and prevent crashes
 - Properly implement namespace isolation in MagiskSU
 
-## Magisk Manager (326eee8c) (219)
-- Fix magisk logs line wrapping
-- Use standard `svc` for rebooting devices
+## Magisk Manager (4a697ca2) (221)
+- New FAB to go to Magisk log bottom
