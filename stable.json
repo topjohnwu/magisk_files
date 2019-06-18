@@ -1,9 +1,9 @@
 {
   "app": {
-    "version": "7.3.0",
-    "versionCode": "220",
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/manager-v7.3.0/MagiskManager-v7.3.0.apk",
-    "note": "https://raw.githubusercontent.com/topjohnwu/Magisk/4a697ca2ecc0cebce94c0371c1e6dc45c9ac4e34/app/src/main/res/raw/changelog.md"
+    "version": "7.3.1",
+    "versionCode": "222",
+    "link": "https://github.com/topjohnwu/Magisk/releases/download/manager-v7.3.1/MagiskManager-v7.3.1.apk",
+    "note": "https://raw.githubusercontent.com/topjohnwu/Magisk/12bbc7fd6b3ba4de40a661bfef7f4f8685793e83/app/src/main/res/raw/changelog.md"
   },
   "uninstaller": {
     "link": "https://github.com/topjohnwu/Magisk/releases/download/v19.3/Magisk-uninstaller-20190604.zip"
