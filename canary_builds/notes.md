@@ -1,9 +1,6 @@
-## Magisk (dd6e55ac) (19303)
-- 100% complete MagiskInit rewrite for system-as-root devices.
-The system partition is now the actual root directory (`/`) as it was designed!!
-- Fully support latest Android Q Beta 4: new SAR implementation + rewritten process monitor for MagiskHide.
-Logical partition (Pixel 3 on Q) is coming next!
+## Magisk (f1112fdf) (19304)
+- Full logical partition support! This means Magisk is now fully ready
+for Android Q on all devices, including the whole Pixel 3 lineup!
 
-## Magisk Manager (dd6e55ac) (227)
-- Update scripts to prevent bootlooping the new SAR setup on boot
-- Add reboot to EDL, and tweaked several reboot options
+## Magisk Manager (f1112fdf) (228)
+- Update scripts to recognize logical partition system-as-root
