@@ -1,6 +1,8 @@
-## Magisk (736729f5) (19307)
-- Fix a bug in the new overlay `*.rc` injection
-- Maintain a list of pre-init mounts to unmount later in the daemon
+## Magisk (087b451e) (19308)
+- Fix a bug when `/product` does not exist, but `/system/product` does
+- Fix `su_info` cache bug, causing consecutive `su` calls failing
 
-## Magisk Manager (a6126c5e) (232)
-- Several UI fixes
+## Magisk Manager (86481c74) (233)
+- Remove option to cache module zips
+- Allow users to select whether to use recovery mode or not.
+This allows A-only system-as-root users manually patch recovery images without recovery_dtbo.
