@@ -1,8 +1,8 @@
-# 2019.9.19 Magisk v19.4
-This version is heavily tested and tons of bugs were squashed before release. However due to the massive changes, it is decided to release a public beta for people/root app developers to adjust/update before things hit public stable.
+# 2019.10.11 Magisk v20.0
+The following release notes are mostly the same as v19.4. Compared to v19.4 beta, the most notable change is adding tons of support for more devices on Android 10, along with several bug fixes.
 
 ### New System-as-root Implementation
-Magisk has supported system-as-root devices for a long time since the first Pixel came out. The goal is always to revert things back to the good old initramfs based root dir. However, this not only creates tons of issues on many devices, not easily hide-able with MagiskHide, but most importantly not even possible on Android 10. Starting with v19.4, Magisk will follow how Google has designed system-as-root: mounting system actually to `/` (root).
+Magisk has supported system-as-root devices for a long time since the first Pixel came out. The goal is always to revert things back to the good old initramfs based root dir. However, this not only creates tons of issues on many devices, not easily hide-able with MagiskHide, but most importantly not even possible on Android 10. Magisk will now start to follow how Google has designed system-as-root: mounting system actually to `/` (root).
 
 This implies several **MASSIVE** consequences for system-as-root devices:
 - `/system` is no longer a valid mount point. For existing root apps that remounts `/system` to `rw`, you will have to remount `/` instead of `/system`
@@ -10,7 +10,7 @@ This implies several **MASSIVE** consequences for system-as-root devices:
 - Several custom kernel rely on Magisk's root directory overlay system (`overlay`) for modifying `/`. This is no longer compatible with the new implementation. A new overlay system (`overlay.d`) will replace the existing one as an alternative (details in [documentations](https://topjohnwu.github.io/Magisk/guides.html#root-directory-overlay-system)). To provide backwards compatibility, Magisk will switch to "Compat Mode" when `/overlay` is detected, which simply reverts to the old system-as-root setup. **Compat Mode will not work on Android 10 and will cause bootloop**. Although things will still work as it used to, **please upgrade to `overlay.d` ASAP**.
 
 ### Android 10 Support
-Other than A-only devices running Android 10, Android 10 is fully supported with MagiskHide fully functioning. Android 10's biggest challenge is the new "2-Stage-Init" system-as-root implementation, which is the sole reason why A-only is not support yet. Stay tuned for further updates as that is the next thing on the list.
+Other than A-only devices running Android 10, Android 10 is fully supported with MagiskHide fully functioning. Android 10's biggest challenge is the new "2-Stage-Init" system-as-root implementation, which requires modding early mount fstab in a specific way, and in many devices' cases involves patching DTBs in the boot image.
 
 (For those interested in "2-Stage-Init" and other details of system-as-root, check [this Twitter thread I tweeted](https://twitter.com/topjohnwu/status/1174392824625676288))
 
