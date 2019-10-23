@@ -14,5 +14,9 @@
     "link": "https://github.com/topjohnwu/Magisk/releases/download/v20.0/Magisk-v20.0.zip",
     "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/2d7ddefbe4946806de1875a18247b724f5e7d4a0/notes.md",
     "md5": "088fb6545e7042a4939bda7d21423b8b"
+  },
+  "stub": {
+    "versionCode": "1",
+    "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/canary/stub-release.apk"
   }
 }
