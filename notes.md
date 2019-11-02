@@ -1,23 +1,16 @@
-# 2019.10.11 Magisk v20.0
-The following release notes are mostly the same as v19.4. Compared to v19.4 beta, the most notable change is adding tons of support for more devices on Android 10, along with several bug fixes.
+# 2019.11.2 Magisk v20.1
+Lots of bug fixes from v20.0, and some cool new features!
 
-### New System-as-root Implementation
-Magisk has supported system-as-root devices for a long time since the first Pixel came out. The goal is always to revert things back to the good old initramfs based root dir. However, this not only creates tons of issues on many devices, not easily hide-able with MagiskHide, but most importantly not even possible on Android 10. Magisk will now start to follow how Google has designed system-as-root: mounting system actually to `/` (root).
+### Updated Magisk Manager Hiding
+Starting with Magisk v20.1 paired with Magisk Manager v7.4.0, a new hiding mode is introduced for Android 9.0+. On supported devices, Magisk Manager will download and customize a heavily obfuscated stub APK and use it as a replacement. The stub app will then download the full app into its private internal data, then dynamically load and run the actual full Magisk Manager.
 
-This implies several **MASSIVE** consequences for system-as-root devices:
-- `/system` is no longer a valid mount point. For existing root apps that remounts `/system` to `rw`, you will have to remount `/` instead of `/system`
-- The root directory (`/`) is no longer `rootfs`, but actually system. Remounting `/` to `rw` and modify files means you are writing to the actual system partition, NOT volatile storage as it used to be in `rootfs`. This is not recommended as user is not necessary aware that you are tampering an actual partition, sometimes dangerous if dm-verity/AVB-verity is enforced, or sometimes outright impossible since many devices now ship with read-only system partitions (e.g. EROFS, EXT4 dedup)
-- Several custom kernel rely on Magisk's root directory overlay system (`overlay`) for modifying `/`. This is no longer compatible with the new implementation. A new overlay system (`overlay.d`) will replace the existing one as an alternative (details in [documentations](https://topjohnwu.github.io/Magisk/guides.html#root-directory-overlay-system)). To provide backwards compatibility, Magisk will switch to "Compat Mode" when `/overlay` is detected, which simply reverts to the old system-as-root setup. **Compat Mode will not work on Android 10 and will cause bootloop**. Although things will still work as it used to, **please upgrade to `overlay.d` ASAP**.
+Note, not all Android 9.0+ devices will be able to use this feature. To use an obfuscated stub as Magisk Manager, the Magisk daemon will have to rely on a special way to communicate with the app, and some OEMs (most likely Chinese manufacturers) block certain broadcasts, breaking the communication channel.
 
-### Android 10 Support
-Android 10 is now fully supported with MagiskHide working as expected. Android 10's biggest challenge is the new "2-Stage-Init" system-as-root implementation, which requires modding early mount fstab in a specific way, and in many devices' cases involves patching DTBs in the boot image.
+Magisk Manager will verify compatibility before it uses stubs to hide itself on Android 9.0+. **The verification relies on Magisk v20.1+, which means you have to fully upgrade and reboot in order to opt in this feature.** If you are already running a hidden Magisk Manager, **restore and upgrade Magisk Manager, upgrade Magisk and reboot, then re-hide the app**.
 
-(For those interested in "2-Stage-Init" and other details of system-as-root, check [this Twitter thread I tweeted](https://twitter.com/topjohnwu/status/1174392824625676288))
+For those incompatible with the hiding-with-stub feature, there are also a few updates that everyone, regardless whether using stubs or not, can enjoy:
 
-### Product Partition Support
-Magisk Module developers can now finally properly modify files in `/product`! This partition is now an essential part in Android 10, and many files are moved from system to product. Please check [documentations](https://topjohnwu.github.io/Magisk/details.html#magic-mount) for more details.
-
-### A-Only System-as-root
-A huge number of new devices have A-only system-as-root setups (Android 9.0). These unfortunate devices will have to install Magisk into the recovery partition. Please check the fully updated [Installation Guide](https://topjohnwu.github.io/Magisk/install.html) for more details.
+- You can now customize the app name of the repackaged Magisk Manager
+- Magisk Manager will generate new keys to sign the repackaged APK to prevent signature detection
 
 ### Full Changelog: [here](https://forum.xda-developers.com/showpost.php?p=68966755&postcount=2)
