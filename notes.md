@@ -1,16 +1,15 @@
-# 2019.11.2 Magisk v20.1
-Lots of bug fixes from v20.0, and some cool new features!
+# 2020.1.2 Magisk v20.2
 
-### Updated Magisk Manager Hiding
-Starting with Magisk v20.1 paired with Magisk Manager v7.4.0, a new hiding mode is introduced for Android 9.0+. On supported devices, Magisk Manager will download and customize a heavily obfuscated stub APK and use it as a replacement. The stub app will then download the full app into its private internal data, then dynamically load and run the actual full Magisk Manager.
+Happy New Year! Let's start 2020 with a new Magisk release :)
 
-Note, not all Android 9.0+ devices will be able to use this feature. To use an obfuscated stub as Magisk Manager, the Magisk daemon will have to rely on a special way to communicate with the app, and some OEMs (most likely Chinese manufacturers) block certain broadcasts, breaking the communication channel.
+### Pre-Init sepolicy Patches for Modules
+Magisk v20.2 add support for modules to include its own custom sepolicy patches. Developers used to use boot scripts along with the `magiskpolicy` tool to do live sepolicy patches; however, this method leads to numerous issues as Android is no longer designed to allow live sepolicy patches, and on some devices (e.g. Huawei) this method is outright inapplicable.
 
-Magisk Manager will verify compatibility before it uses stubs to hide itself on Android 9.0+. **The verification relies on Magisk v20.1+, which means you have to fully upgrade and reboot in order to opt in this feature.** If you are already running a hidden Magisk Manager, **restore and upgrade Magisk Manager, upgrade Magisk and reboot, then re-hide the app**.
+To address this issue, Magisk allow module devs to create a new file called `sepolicy.rule` in their modules. The module installer script and Magisk daemon will make sure this file is stored in somewhere accessible pre-init to allow `magiskinit` to do its job every time your device boots up.
 
-For those incompatible with the hiding-with-stub feature, there are also a few updates that everyone, regardless whether using stubs or not, can enjoy:
+### New Module Installer Format
+The old template is actually pretty convoluted: developers are expected to implement specific callback functions in their `install.sh`, and the zip file structure does not directly represent how modules are actually stored on your device. The new module installer format makes creating new modules very easy, but still give experienced developers tons of freedom to do anything they want in the installation process.
 
-- You can now customize the app name of the repackaged Magisk Manager
-- Magisk Manager will generate new keys to sign the repackaged APK to prevent signature detection
+For details regarding `sepolicy.rule` and the new module installer format, please read the updated [Developer Guides](https://topjohnwu.github.io/Magisk/guides.html). Note that the old "Module Installer Template" is obsolete; creating a Magisk module no longer requires a "template" as it is now a straightforward process.
 
 ### Full Changelog: [here](https://forum.xda-developers.com/showpost.php?p=68966755&postcount=2)
