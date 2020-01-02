@@ -1,22 +1,22 @@
 {
   "app": {
-    "version": "7.4.0",
-    "versionCode": "253",
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/manager-v7.4.0/MagiskManager-v7.4.0.apk",
-    "note": "https://raw.githubusercontent.com/topjohnwu/Magisk/7da97489cc0f6bb0ddcde8d5a91fa1719bf01791/app/src/main/res/raw/changelog.md"
+    "version": "7.5.0",
+    "versionCode": "265",
+    "link": "https://github.com/topjohnwu/Magisk/releases/download/manager-v7.5.0/MagiskManager-v7.5.0.apk",
+    "note": "https://raw.githubusercontent.com/topjohnwu/Magisk/e0d02a61a9c3e86fdb7b849e0dd767f5490e84a1/app/src/main/res/raw/changelog.md"
   },
   "uninstaller": {
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/v20.1/Magisk-uninstaller-20191102.zip"
+    "link": "https://github.com/topjohnwu/Magisk/releases/download/v20.2/Magisk-uninstaller-20200102.zip"
   },
   "magisk": {
-    "version": "20.1",
-    "versionCode": "20100",
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/v20.1/Magisk-v20.1.zip",
-    "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/6f94236b1407bd0c162647db75dfa2ac956163ca/notes.md",
-    "md5": "994679ea19d7980f5fd28748c4e8abdd"
+    "version": "20.2",
+    "versionCode": "20200",
+    "link": "https://github.com/topjohnwu/Magisk/releases/download/v20.2/Magisk-v20.2.zip",
+    "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/de0ebcfdf314133118e1fd4bbbf12db9ae7f4613/notes.md",
+    "md5": "7da59a78ab2fb4dc9d123f1e4db3cba5"
   },
   "stub": {
-    "versionCode": "3",
+    "versionCode": "7",
     "link": "https://raw.githubusercontent.com/topjohnwu/magisk_files/stub/stub-release.apk"
   }
 }
