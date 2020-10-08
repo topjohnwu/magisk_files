@@ -1,7 +1,7 @@
 {
   "app": {
-    "version": "f0f1cdc5",
-    "versionCode": "306",
+    "version": "d4d837a5",
+    "versionCode": "308",
     "link": "app-debug.apk",
     "note": "notes.md"
   },
@@ -16,7 +16,7 @@
     "link": "magisk-uninstaller.zip"
   },
   "stub": {
-    "versionCode": "11",
+    "versionCode": "12",
     "link": "stub-release.apk"
   }
 }
