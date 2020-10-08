@@ -6,11 +6,11 @@
     "note": "notes.md"
   },
   "magisk": {
-    "version": "64effe93",
-    "versionCode": "21001",
+    "version": "04995881",
+    "versionCode": "21002",
     "link": "magisk-debug.zip",
     "note": "notes.md",
-    "md5": "d772c46890dd232143c8ef3d06a725e7"
+    "md5": "379f78d11d8f0a8eec26c56f154ba31d"
   },
   "uninstaller": {
     "link": "magisk-uninstaller.zip"
