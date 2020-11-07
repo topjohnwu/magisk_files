@@ -7,6 +7,6 @@
 - Properly handle factory reset cases on Android 11
 - Add magisk binaries to `PATH` in boot scripts
 
-## Magisk Manager (dc5e78e1) (312)
+## Magisk Manager (2739d3cb) (313)
 - Fix crashes when network error occurs
 - Tapjacking protection
