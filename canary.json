@@ -1,22 +1,22 @@
 {
   "app": {
-    "version": "2739d3cb",
-    "versionCode": "313",
+    "version": "1469b82a",
+    "versionCode": "315",
     "link": "app-debug.apk",
     "note": "notes.md"
   },
   "magisk": {
-    "version": "dc5e78e1",
-    "versionCode": "21006",
+    "version": "1469b82a",
+    "versionCode": "21101",
     "link": "magisk-debug.zip",
     "note": "notes.md",
-    "md5": "1bc6f42919ee2123f25d19ede471253b"
+    "md5": "ebe5ec3f4e4e1226e387ebe7c7d06e0c"
   },
   "uninstaller": {
     "link": "magisk-uninstaller.zip"
   },
   "stub": {
-    "versionCode": "13",
+    "versionCode": "14",
     "link": "stub-release.apk"
   }
 }
