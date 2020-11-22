@@ -2,8 +2,8 @@
   "app": {
     "version": "7.5.1",
     "versionCode": "267",
-    "link": "app-debug.apk",
-    "note": "notes.md"
+    "link": "https://github.com/topjohnwu/Magisk/releases/download/manager-v7.5.1/MagiskManager-v7.5.1.apk",
+    "note": "https://raw.githubusercontent.com/topjohnwu/Magisk/7db523071d662dcc8eb187e3cbae141c716ba045/app/src/main/res/raw/changelog.md"
   },
   "magisk": {
     "version": "1469b82a",
