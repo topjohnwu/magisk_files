@@ -1,6 +1,5 @@
-## Magisk (b51b884f) (21103)
-- Unblock signals before executing commands
-- Fix module installation in recovery
+## Magisk (6d88d8ad) (21201)
+- Sync with public release
 
-## Magisk Manager (b51b884f) (4766)
-- More minor changes
+## Magisk Manager (6d88d8ad) (4770)
+- Sync with public release
