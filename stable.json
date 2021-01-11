@@ -1,6 +1,6 @@
 {
   "app": {
-    "version": "8.0.4",
+    "version": "8.0.5",
     "versionCode": "4802",
     "link": "https://github.com/topjohnwu/Magisk/releases/download/manager-v8.0.5/MagiskManager-v8.0.5.apk",
     "note": "https://cdn.jsdelivr.net/gh/topjohnwu/Magisk@manager-v8.0.5/app/src/main/res/raw/changelog.md"
