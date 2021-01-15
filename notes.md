@@ -1,7 +1,5 @@
-## Magisk (76061296) (21202)
-- Support `rootwait` cmdline parameter on legacy SAR
-- Re-enable DTB fstab `mnt_point` redirection for 2SI devices
-- Don't care about DTB fstab in 2SI in `magiskinit`
+## Magisk (04c53c35) (21203)
+- Workaround `f2fs` bugs in Linux that causes bootloops
 
-## Magisk Manager (76061296) (4814)
-- Sync with public release
+## Magisk Manager (04c53c35) (4818)
+- Update scripts for the said fix mentioned above
