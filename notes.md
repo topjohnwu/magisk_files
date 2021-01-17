@@ -1,5 +1,5 @@
-## Magisk (79140c76) (21305)
-- Proper `xxread` and `xwrite` implementation
+## Magisk (f5593e05) (21401)
+- Sync with public release
 
-## Magisk Manager (b5b62e03) (4831)
-- Fix `copySepolicyRules` logic error
+## Magisk Manager (f5593e05) (4835)
+- Sync with public release
