@@ -1,5 +1,5 @@
-## Magisk (2f5331ab) (21301)
-- Sync with public release.
+## Magisk (f5c2d724) (21302)
+- Add more details in logs
 
-## Magisk Manager (2f5331ab) (4828)
-- Sync with public release
+## Magisk Manager (f5c2d724) (4829)
+- Fix version string
