@@ -1,5 +1,5 @@
-## Magisk (f5c2d724) (21302)
-- Add more details in logs
+## Magisk (b5b62e03) (21303)
+- Fix `magiskhide ls` broken pipe issue
 
-## Magisk Manager (f5c2d724) (4829)
-- Fix version string
+## Magisk Manager (b5b62e03) (4831)
+- Fix `copySepolicyRules` logic error
