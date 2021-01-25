@@ -1,7 +1,7 @@
-## Magisk (4cc41ecc) (21403)
+## Magisk (b1dbbdef) (21404)
 
-- [App] Fixed storage permission issues when patching boot images on pre Android 11 devices
-- [General] Updated scripts to workaround issues with some modules using fully custom installation logic
+- [MagiskInit] Fix bootloops on legacy rootfs devices
+- [General] Remove unneeded busybox redirection
 
 ### How to Use the APK for Recoveries
 
@@ -16,5 +16,4 @@ To uninstall in recovery, rename the zip file to `uninstall.zip` before flashing
 - [General] Magisk and Magisk Manager is now merged
 - [General] The app name is changed from "Magisk Manager" to simply "Magisk".
 If you are currently hiding Magisk Manager, you would need to un-hide and re-hide to have the app label renamed properly.
-- [MagiskInit] Fixed a bug caused by typo (harmless to user)
 - [MagiskHide] Fix a bug when stopping MagiskHide does not take effect
