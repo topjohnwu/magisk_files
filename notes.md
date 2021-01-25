@@ -1,7 +1,8 @@
-## Magisk (b1dbbdef) (21404)
+## Magisk (07bd36c9) (21405)
 
 - [MagiskInit] Fix bootloops on legacy rootfs devices
 - [General] Remove unneeded busybox redirection
+- [App] Fix bugs in patching either boot images or tar files
 
 ### How to Use the APK for Recoveries
 
