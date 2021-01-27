@@ -1,8 +1,11 @@
-## Magisk (07bd36c9) (21405)
+## Magisk (6fb20b3e) (21406)
 
-- [MagiskInit] Fix bootloops on legacy rootfs devices
-- [General] Remove unneeded busybox redirection
-- [App] Fix bugs in patching either boot images or tar files
+### RESTORE THE HIDDEN MAGISK APP BEFORE UPGRADING IF RUNNING LOWER THAN ANDROID 9.0
+
+- [App] Support hiding the Magisk app with advanced technique (stub APK loading) on Android 5.0+ (it used to be 9.0+)
+- [App] Disallow re-packaging the Magisk app on devices lower than Android 5.0
+- [App] Also download to external storage when upgrading the app
+- [MagiskSU] Fix root on Android 7.1 and lower
 
 ### How to Use the APK for Recoveries
 
@@ -14,7 +17,8 @@ To uninstall in recovery, rename the zip file to `uninstall.zip` before flashing
 
 ## Diff from v21.4
 
-- [General] Magisk and Magisk Manager is now merged
-- [General] The app name is changed from "Magisk Manager" to simply "Magisk".
-If you are currently hiding Magisk Manager, you would need to un-hide and re-hide to have the app label renamed properly.
+- [General] Magisk and Magisk Manager is now merged!
+- [App] Rename the app "Magisk Manager" to "Magisk"
+- [App] Support hiding the Magisk app with advanced technique (stub APK loading) on Android 5.0+ (it used to be 9.0+)
+- [App] Disallow re-packaging the Magisk app on devices lower than Android 5.0
 - [MagiskHide] Fix a bug when stopping MagiskHide does not take effect
