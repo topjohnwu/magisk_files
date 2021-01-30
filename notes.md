@@ -1,11 +1,7 @@
-## Magisk (6fb20b3e) (21406)
+## Magisk (0646f48e) (21407)
 
-### RESTORE THE HIDDEN MAGISK APP BEFORE UPGRADING IF RUNNING LOWER THAN ANDROID 9.0
-
-- [App] Support hiding the Magisk app with advanced technique (stub APK loading) on Android 5.0+ (it used to be 9.0+)
-- [App] Disallow re-packaging the Magisk app on devices lower than Android 5.0
-- [App] Also download to external storage when upgrading the app
-- [MagiskSU] Fix root on Android 7.1 and lower
+- [App] Support creating shortcuts on devices older than Android 8.0
+- [App] Avoid Shell backed I/O for reliable installation
 
 ### How to Use the APK for Recoveries
 
