@@ -1,7 +1,7 @@
-## Magisk (0646f48e) (21407)
+## Magisk (721dfdf5) (21408)
 
-- [App] Support creating shortcuts on devices older than Android 8.0
-- [App] Avoid Shell backed I/O for reliable installation
+- [MagiskBoot] Fix bug when unpacking `lz4_lg` compressed boot images
+- [App] Fix boot image/tar file patching on some configurations
 
 ### How to Use the APK for Recoveries
 
@@ -18,3 +18,4 @@ To uninstall in recovery, rename the zip file to `uninstall.zip` before flashing
 - [App] Support hiding the Magisk app with advanced technique (stub APK loading) on Android 5.0+ (it used to be 9.0+)
 - [App] Disallow re-packaging the Magisk app on devices lower than Android 5.0
 - [MagiskHide] Fix a bug when stopping MagiskHide does not take effect
+- [MagiskBoot] Fix bug when unpacking `lz4_lg` compressed boot images
