@@ -1,8 +1,7 @@
-## Magisk (8476eb9f) (21409)
+## Magisk (b76c80e2) (21410)
 
-- [MagiskInit] Support Galaxy S21 series
-- [App] Update many strings in the app
-- [App] Do not allow OTA feature on virtual A/B devices
+- [App] Fix crashes after hiding the Magisk app
+- [MagiskSU] Fix incorrect APEX paths that caused `libsqlite.so` fail to load
 
 ### How to Use the APK for Recoveries
 
@@ -20,3 +19,5 @@ To uninstall in recovery, rename the zip file to `uninstall.zip` before flashing
 - [App] Disallow re-packaging the Magisk app on devices lower than Android 5.0
 - [MagiskHide] Fix a bug when stopping MagiskHide does not take effect
 - [MagiskBoot] Fix bug when unpacking `lz4_lg` compressed boot images
+- [MagiskInit] Support Galaxy S21 series
+- [MagiskSU] Fix incorrect APEX paths that caused `libsqlite.so` fail to load
