@@ -1,7 +1,8 @@
-## Magisk (721dfdf5) (21408)
+## Magisk (8476eb9f) (21409)
 
-- [MagiskBoot] Fix bug when unpacking `lz4_lg` compressed boot images
-- [App] Fix boot image/tar file patching on some configurations
+- [MagiskInit] Support Galaxy S21 series
+- [App] Update many strings in the app
+- [App] Do not allow OTA feature on virtual A/B devices
 
 ### How to Use the APK for Recoveries
 
