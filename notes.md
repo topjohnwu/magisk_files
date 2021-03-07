@@ -1,7 +1,7 @@
-## Magisk (79ee85c0) (22001)
+## Magisk (45e0df9c) (22002)
 
-- Sync with public release
-
-## Diff from v22.0
-
-None
+- [App] Prevent multiple installation sessions running in parallel
+- [App] Prevent OutOfMemory crashes when checking boot signature on PXA boot images
+- [General] Proper cgroup migration implementation
+- [General] Prevent possible deadlock in logging code
+- [MagiskBoot] Preserve and patch AVB 2.0 structures/headers in boot images
