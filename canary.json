@@ -1,13 +1,13 @@
 {
   "app": {
-    "version": "45e0df9c",
-    "versionCode": "22002",
+    "version": "bf80b08b",
+    "versionCode": "22003",
     "link": "app-debug.apk",
     "note": "notes.md"
   },
   "magisk": {
-    "version": "84811c80",
-    "versionCode": "22002",
+    "version": "bf80b08b",
+    "versionCode": "22003",
     "link": "app-debug.apk",
     "note": "notes.md",
     "md5": ""

@@ -1,4 +1,8 @@
-## Magisk (45e0df9c) (22002)
+## Magisk (bf80b08b) (22003)
+
+- Rebuild executables (fix boot image repacking issues)
+
+## Diffs to v22.0
 
 - [App] Prevent multiple installation sessions running in parallel
 - [App] Prevent OutOfMemory crashes when checking boot signature on PXA boot images
