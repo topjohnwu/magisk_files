@@ -1,22 +1,22 @@
 {
   "app": {
-    "version": "22.0",
-    "versionCode": "22000",
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/v22.0/Magisk-v22.0.apk",
-    "note": "https://topjohnwu.github.io/Magisk/releases/22000.md"
+    "version": "22.1",
+    "versionCode": "22100",
+    "link": "https://cdn.jsdelivr.net/gh/topjohnwu/magisk-files@22.1/app-release.apk",
+    "note": "https://topjohnwu.github.io/Magisk/releases/22100.md"
   },
   "stub": {
-    "versionCode": "18",
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/v22.0/stub-release.apk"
+    "versionCode": "20",
+    "link": "https://cdn.jsdelivr.net/gh/topjohnwu/magisk-files@22.1/stub-release.apk"
   },
   "uninstaller": {
     "link": "https://github.com/topjohnwu/Magisk/releases/download/v21.4/Magisk-uninstaller-20210117.zip"
   },
   "magisk": {
-    "version": "22.0",
-    "versionCode": "22000",
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/v22.0/Magisk-v22.0.apk",
-    "note": "https://topjohnwu.github.io/Magisk/releases/22000.md",
-    "md5": "e14132835b4cc0878639fcf645db479c"
+    "version": "22.1",
+    "versionCode": "22100",
+    "link": "https://cdn.jsdelivr.net/gh/topjohnwu/magisk-files@22.1/app-release.apk",
+    "note": "https://topjohnwu.github.io/Magisk/releases/22100.md",
+    "md5": ""
   }
 }
